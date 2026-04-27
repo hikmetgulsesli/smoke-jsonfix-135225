@@ -27,10 +27,10 @@ export function AyarlarEkrani({
   return (
     <>
       {/* TopAppBar */}
-      <header className="bg-[#0b1326] font-['Inter'] font-medium tracking-wider text-xs docked full-width top-0 bg-gradient-to-b from-[#2d3449]/20 to-transparent flat no shadows scale-98 active:opacity-80 transition-all flex justify-between items-center px-6 py-4 w-full z-50 sticky">
-        <div className="text-[#dae2fd] font-black tracking-tighter text-xl">SESSİZ GÖZLEMCİ</div>
+      <header className="bg-background font-body font-medium tracking-wider text-xs docked full-width top-0 bg-gradient-to-b from-surface-container-highest/20 to-transparent flat no shadows scale-98 active:opacity-80 transition-all flex justify-between items-center px-6 py-4 w-full z-50 sticky">
+        <div className="text-on-surface font-black tracking-tighter text-xl">SESSİZ GÖZLEMCİ</div>
         <div className="flex items-center gap-4">
-          <button className="text-[#dae2fd]/60 hover:text-[#adc6ff] transition-colors duration-300 cursor-pointer">
+          <button className="text-on-surface/60 hover:text-primary transition-colors duration-300 cursor-pointer">
             <span className="material-symbols-outlined text-[24px]">settings</span>
           </button>
         </div>
@@ -155,19 +155,19 @@ export function AyarlarEkrani({
         </div>
       </main>
       {/* BottomNavBar */}
-      <nav className="bg-[#0b1326]/80 backdrop-blur-xl font-['Inter'] font-bold text-[10px] tracking-[0.05em] fixed bottom-0 w-full rounded-t-3xl border-t border-[#dae2fd]/10 shadow-[0_-8px_32px_rgba(0,0,0,0.4)] fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 md:hidden">
-        <button onClick={() => onNavigate("counter")} className="flex flex-col items-center justify-center text-[#dae2fd]/40 px-5 py-2 hover:text-[#dae2fd] transition-all active:scale-90 transition-transform duration-200 cursor-pointer">
+      <nav className="bg-background/80 backdrop-blur-xl font-body font-bold text-[10px] tracking-[0.05em] fixed bottom-0 w-full rounded-t-3xl border-t border-on-surface/10 shadow-[0_-8px_32px_rgba(0,0,0,0.4)] fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 md:hidden">
+        <button onClick={() => onNavigate("counter")} className="flex flex-col items-center justify-center text-on-surface/40 px-5 py-2 hover:text-on-surface transition-all active:scale-90 transition-transform duration-200 cursor-pointer">
           <span className="material-symbols-outlined text-[24px] mb-1">add_circle</span>
           <span>SAYAÇ</span>
         </button>
-        <button onClick={() => onNavigate("notes")} className="flex flex-col items-center justify-center text-[#dae2fd]/40 px-5 py-2 hover:text-[#dae2fd] transition-all active:scale-90 transition-transform duration-200 cursor-pointer">
+        <button onClick={() => onNavigate("notes")} className="flex flex-col items-center justify-center text-on-surface/40 px-5 py-2 hover:text-on-surface transition-all active:scale-90 transition-transform duration-200 cursor-pointer">
           <span className="material-symbols-outlined text-[24px] mb-1">history_edu</span>
           <span>NOTLAR</span>
         </button>
-        <div className="flex flex-col items-center justify-center bg-[#2d3449] text-[#adc6ff] rounded-2xl px-5 py-2 shadow-[0_0_15px_rgba(173,198,255,0.2)] hover:text-[#dae2fd] transition-all active:scale-90 transition-transform duration-200">
+        <button className="flex flex-col items-center justify-center bg-surface-container-highest text-primary rounded-2xl px-5 py-2 shadow-[0_0_15px_rgba(173,198,255,0.2)] hover:text-on-surface transition-all active:scale-90 transition-transform duration-200">
           <span className="material-symbols-outlined text-[24px] mb-1" style={{fontVariationSettings: "'FILL' 1"}}>tune</span>
           <span>AYARLAR</span>
-        </div>
+        </button>
       </nav>
     </>
   );

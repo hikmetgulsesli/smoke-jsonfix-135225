@@ -61,26 +61,3 @@ body {
   .font-label { font-family: var(--font-label), sans-serif; }
 }
 
-/* Scrollbar styling for dark theme */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--color-surface-container-low); }
-::-webkit-scrollbar-thumb { background: var(--color-surface-container-high); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--color-outline-variant); }
-
-/* Range input styling */
-input[type="range"] { -webkit-appearance: none; appearance: none; background: transparent; cursor: pointer; }
-input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; height: 16px; width: 16px; border-radius: 50%; background: var(--color-primary); box-shadow: 0 0 10px rgba(173,198,255,0.5); margin-top: -6px; }
-input[type="range"]::-webkit-slider-runnable-track { height: 4px; border-radius: 2px; background: var(--color-surface-container-highest); }
-
-
-/* Scrollbar styling for dark theme */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--color-surface-container-low); }
-::-webkit-scrollbar-thumb { background: var(--color-surface-container-high); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--color-outline-variant); }
-
-/* Range input styling */
-input[type="range"] { -webkit-appearance: none; appearance: none; background: transparent; cursor: pointer; }
-input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; height: 16px; width: 16px; border-radius: 50%; background: var(--color-primary); box-shadow: 0 0 10px rgba(173,198,255,0.5); margin-top: -6px; }
-input[type="range"]::-webkit-slider-runnable-track { height: 4px; border-radius: 2px; background: var(--color-surface-container-highest); }
-

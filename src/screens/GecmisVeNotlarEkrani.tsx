@@ -56,10 +56,10 @@ export function GecmisVeNotlarEkrani({
   return (
     <>
       {/* TopAppBar */}
-      <header className="docked full-width top-0 z-50 bg-[#0b1326] bg-gradient-to-b from-[#2d3449]/20 to-transparent flex justify-between items-center px-6 py-4 w-full flat no shadows">
-      <div className="text-[#dae2fd] font-black tracking-tighter text-xl">SESSİZ GÖZLEMCİ</div>
+      <header className="docked full-width top-0 z-50 bg-background bg-gradient-to-b from-surface-container-highest/20 to-transparent flex justify-between items-center px-6 py-4 w-full flat no shadows">
+      <div className="text-on-surface font-black tracking-tighter text-xl">SESSİZ GÖZLEMCİ</div>
       <div className="flex items-center gap-4">
-      <button onClick={() => onNavigate("settings")} className="text-[#adc6ff] hover:text-[#adc6ff] transition-colors duration-300 scale-98 active:opacity-80 transition-all p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary/50 cursor-pointer">
+      <button onClick={() => onNavigate("settings")} className="text-primary hover:text-primary transition-colors duration-300 scale-98 active:opacity-80 transition-all p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary/50 cursor-pointer">
       <span className="material-symbols-outlined" data-icon="settings">settings</span>
       </button>
       </div>
@@ -142,31 +142,31 @@ export function GecmisVeNotlarEkrani({
       </div>
       </main>
       {/* BottomNavBar */}
-      <nav className="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#0b1326]/80 backdrop-blur-xl rounded-t-3xl border-t border-[#dae2fd]/10 shadow-[0_-8px_32px_rgba(0,0,0,0.4)] md:hidden">
-        <button onClick={() => onNavigate("counter")} className="flex flex-col items-center justify-center text-[#dae2fd]/40 px-5 py-2 hover:text-[#dae2fd] transition-all active:scale-90 transition-transform duration-200 cursor-pointer">
+      <nav className="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-background/80 backdrop-blur-xl rounded-t-3xl border-t border-on-surface/10 shadow-[0_-8px_32px_rgba(0,0,0,0.4)] md:hidden">
+        <button onClick={() => onNavigate("counter")} className="flex flex-col items-center justify-center text-on-surface/40 px-5 py-2 hover:text-on-surface transition-all active:scale-90 transition-transform duration-200 cursor-pointer">
           <span className="material-symbols-outlined mb-1" data-icon="add_circle">add_circle</span>
-          <span className="font-['Inter'] font-bold text-[10px] tracking-[0.05em]">SAYAÇ</span>
+          <span className="font-body font-bold text-[10px] tracking-[0.05em]">SAYAÇ</span>
         </button>
-        <div className="flex flex-col items-center justify-center bg-[#2d3449] text-[#adc6ff] rounded-2xl px-5 py-2 shadow-[0_0_15px_rgba(173,198,255,0.2)] active:scale-90 transition-transform duration-200">
+        <button className="flex flex-col items-center justify-center bg-surface-container-highest text-primary rounded-2xl px-5 py-2 shadow-[0_0_15px_rgba(173,198,255,0.2)] active:scale-90 transition-transform duration-200">
           <span className="material-symbols-outlined mb-1" data-icon="history_edu">history_edu</span>
-          <span className="font-['Inter'] font-bold text-[10px] tracking-[0.05em]">NOTLAR</span>
-        </div>
-        <button onClick={() => onNavigate("settings")} className="flex flex-col items-center justify-center text-[#dae2fd]/40 px-5 py-2 hover:text-[#dae2fd] transition-all active:scale-90 transition-transform duration-200 cursor-pointer">
+          <span className="font-body font-bold text-[10px] tracking-[0.05em]">NOTLAR</span>
+        </button>
+        <button onClick={() => onNavigate("settings")} className="flex flex-col items-center justify-center text-on-surface/40 px-5 py-2 hover:text-on-surface transition-all active:scale-90 transition-transform duration-200 cursor-pointer">
           <span className="material-symbols-outlined mb-1" data-icon="tune">tune</span>
-          <span className="font-['Inter'] font-bold text-[10px] tracking-[0.05em]">AYARLAR</span>
+          <span className="font-body font-bold text-[10px] tracking-[0.05em]">AYARLAR</span>
         </button>
       </nav>
       {/* Web Navigation Cluster */}
-      <nav className="hidden md:flex fixed top-0 right-0 z-50 items-center h-[68px] px-6 gap-8 text-[#dae2fd]/60 mr-16">
-        <button onClick={() => onNavigate("counter")} className="flex items-center gap-2 hover:text-[#adc6ff] transition-colors text-sm font-medium tracking-wide cursor-pointer">
+      <nav className="hidden md:flex fixed top-0 right-0 z-50 items-center h-[68px] px-6 gap-8 text-on-surface/60 mr-16">
+        <button onClick={() => onNavigate("counter")} className="flex items-center gap-2 hover:text-primary transition-colors text-sm font-medium tracking-wide cursor-pointer">
           <span className="material-symbols-outlined" data-icon="add_circle">add_circle</span>
           <span>SAYAÇ</span>
         </button>
-        <div className="flex items-center gap-2 text-[#adc6ff] font-bold text-sm tracking-wide cursor-pointer">
+        <button className="flex items-center gap-2 text-primary font-bold text-sm tracking-wide cursor-pointer">
           <span className="material-symbols-outlined" data-icon="history_edu">history_edu</span>
           <span>NOTLAR</span>
-        </div>
-        <button onClick={() => onNavigate("settings")} className="flex items-center gap-2 hover:text-[#adc6ff] transition-colors text-sm font-medium tracking-wide cursor-pointer">
+        </button>
+        <button onClick={() => onNavigate("settings")} className="flex items-center gap-2 hover:text-primary transition-colors text-sm font-medium tracking-wide cursor-pointer">
           <span className="material-symbols-outlined" data-icon="tune">tune</span>
           <span>AYARLAR</span>
         </button>

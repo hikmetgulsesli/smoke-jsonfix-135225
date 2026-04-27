@@ -40,14 +40,8 @@ export default function App() {
   return (
     <div
       data-setfarm-root="baseline"
-      className={`min-h-screen flex flex-col ${
-        state.theme === "light" ? "bg-white text-slate-950" : ""
-      }`}
-      style={
-        state.theme === "dark"
-          ? { backgroundColor: "var(--color-background)", color: "var(--color-on-surface)" }
-          : undefined
-      }
+      className="min-h-screen flex flex-col"
+      style={{ backgroundColor: "var(--color-background)", color: "var(--color-on-surface)" }}
     >
       {screen === "counter" && (
         <AnaSayacEkrani
