@@ -1,0 +1,373 @@
+[
+  {
+    "screenId": "4e867cbea48f4232a488b2b30f1e256c",
+    "screenTitle": "Sıfırlama Onay Modalı",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "button",
+        "label": "EVET, SIFIRLA",
+        "line": 117
+      },
+      {
+        "type": "button",
+        "label": "İPTAL",
+        "line": 121
+      }
+    ],
+    "navigation": [],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "EVET, SIFIRLA",
+        "line": 117
+      },
+      {
+        "type": "button",
+        "label": "İPTAL",
+        "line": 121
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 2,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "d200f0dd319547d0b1f0dbc1c501bebb",
+    "screenTitle": "Ayarlar Ekranı",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 91
+      },
+      {
+        "type": "button",
+        "label": "light_mode",
+        "line": 119
+      },
+      {
+        "type": "button",
+        "label": "dark_mode",
+        "line": 122
+      },
+      {
+        "type": "button",
+        "label": "SİL",
+        "line": 172
+      },
+      {
+        "type": "button",
+        "label": "SAYAÇ",
+        "line": 195
+      },
+      {
+        "type": "button",
+        "label": "NOTLAR",
+        "line": 199
+      },
+      {
+        "type": "button",
+        "label": "AYARLAR",
+        "line": 203
+      },
+      {
+        "type": "input",
+        "label": "range",
+        "inputType": "range",
+        "line": 149
+      }
+    ],
+    "navigation": [],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 91
+      },
+      {
+        "type": "button",
+        "label": "light_mode",
+        "line": 119
+      },
+      {
+        "type": "button",
+        "label": "dark_mode",
+        "line": 122
+      },
+      {
+        "type": "button",
+        "label": "SİL",
+        "line": 172
+      },
+      {
+        "type": "button",
+        "label": "SAYAÇ",
+        "line": 195
+      },
+      {
+        "type": "button",
+        "label": "NOTLAR",
+        "line": 199
+      },
+      {
+        "type": "button",
+        "label": "AYARLAR",
+        "line": 203
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "range",
+        "inputType": "range",
+        "line": 149
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 8,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "61e9ae9535ff461e82145dd9af22d53f",
+    "screenTitle": "Ana Sayaç Ekranı",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 99
+      },
+      {
+        "type": "button",
+        "label": "remove",
+        "line": 120
+      },
+      {
+        "type": "button",
+        "label": "add",
+        "line": 124
+      },
+      {
+        "type": "button",
+        "label": "SIFIRLA",
+        "line": 130
+      },
+      {
+        "type": "button",
+        "label": "SAYAÇ",
+        "line": 160
+      },
+      {
+        "type": "button",
+        "label": "NOTLAR",
+        "line": 164
+      },
+      {
+        "type": "button",
+        "label": "AYARLAR",
+        "line": 168
+      }
+    ],
+    "navigation": [],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 99
+      },
+      {
+        "type": "button",
+        "label": "remove",
+        "line": 120
+      },
+      {
+        "type": "button",
+        "label": "add",
+        "line": 124
+      },
+      {
+        "type": "button",
+        "label": "SIFIRLA",
+        "line": 130
+      },
+      {
+        "type": "button",
+        "label": "SAYAÇ",
+        "line": 160
+      },
+      {
+        "type": "button",
+        "label": "NOTLAR",
+        "line": 164
+      },
+      {
+        "type": "button",
+        "label": "AYARLAR",
+        "line": 168
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 7,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "5cec9ed3d7b846208a8e60f91cc23bc9",
+    "screenTitle": "Geçmiş ve Notlar Ekranı",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "SAYAÇ",
+        "href": "#",
+        "line": 185
+      },
+      {
+        "type": "link",
+        "label": "NOTLAR",
+        "href": "#",
+        "line": 189
+      },
+      {
+        "type": "link",
+        "label": "AYARLAR",
+        "href": "#",
+        "line": 193
+      },
+      {
+        "type": "link",
+        "label": "SAYAÇ",
+        "href": "#",
+        "line": 200
+      },
+      {
+        "type": "link",
+        "label": "NOTLAR",
+        "href": "#",
+        "line": 204
+      },
+      {
+        "type": "link",
+        "label": "AYARLAR",
+        "href": "#",
+        "line": 208
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 90
+      },
+      {
+        "type": "button",
+        "label": "GEÇMİŞİ TEMİZLE",
+        "line": 103
+      },
+      {
+        "type": "button",
+        "label": "Sil",
+        "line": 151
+      },
+      {
+        "type": "button",
+        "label": "Sil",
+        "line": 161
+      },
+      {
+        "type": "button",
+        "label": "EKLE",
+        "line": 172
+      },
+      {
+        "type": "input",
+        "label": "Yeni not ekle...",
+        "inputType": "textarea",
+        "placeholder": "Yeni not ekle...",
+        "line": 170
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "SAYAÇ",
+        "href": "#",
+        "line": 185
+      },
+      {
+        "type": "link",
+        "label": "NOTLAR",
+        "href": "#",
+        "line": 189
+      },
+      {
+        "type": "link",
+        "label": "AYARLAR",
+        "href": "#",
+        "line": 193
+      },
+      {
+        "type": "link",
+        "label": "SAYAÇ",
+        "href": "#",
+        "line": 200
+      },
+      {
+        "type": "link",
+        "label": "NOTLAR",
+        "href": "#",
+        "line": 204
+      },
+      {
+        "type": "link",
+        "label": "AYARLAR",
+        "href": "#",
+        "line": 208
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 90
+      },
+      {
+        "type": "button",
+        "label": "GEÇMİŞİ TEMİZLE",
+        "line": 103
+      },
+      {
+        "type": "button",
+        "label": "Sil",
+        "line": 151
+      },
+      {
+        "type": "button",
+        "label": "Sil",
+        "line": 161
+      },
+      {
+        "type": "button",
+        "label": "EKLE",
+        "line": 172
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "Yeni not ekle...",
+        "inputType": "textarea",
+        "placeholder": "Yeni not ekle...",
+        "line": 170
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 12,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  }
+]
