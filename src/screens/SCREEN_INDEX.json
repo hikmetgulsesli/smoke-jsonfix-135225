@@ -1,0 +1,38 @@
+[
+  {
+    "screenId": "4e867cbea48f4232a488b2b30f1e256c",
+    "title": "Sıfırlama Onay Modalı",
+    "componentName": "SifirlamaOnayModali",
+    "file": "src/screens/SifirlamaOnayModali.tsx",
+    "buttons": 2,
+    "inputs": 0,
+    "links": 0
+  },
+  {
+    "screenId": "d200f0dd319547d0b1f0dbc1c501bebb",
+    "title": "Ayarlar Ekranı",
+    "componentName": "AyarlarEkrani",
+    "file": "src/screens/AyarlarEkrani.tsx",
+    "buttons": 7,
+    "inputs": 1,
+    "links": 0
+  },
+  {
+    "screenId": "61e9ae9535ff461e82145dd9af22d53f",
+    "title": "Ana Sayaç Ekranı",
+    "componentName": "AnaSayacEkrani",
+    "file": "src/screens/AnaSayacEkrani.tsx",
+    "buttons": 7,
+    "inputs": 0,
+    "links": 0
+  },
+  {
+    "screenId": "5cec9ed3d7b846208a8e60f91cc23bc9",
+    "title": "Geçmiş ve Notlar Ekranı",
+    "componentName": "GecmisVeNotlarEkrani",
+    "file": "src/screens/GecmisVeNotlarEkrani.tsx",
+    "buttons": 5,
+    "inputs": 0,
+    "links": 6
+  }
+]
