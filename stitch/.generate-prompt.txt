@@ -1,0 +1,181 @@
+# Sayaç ve Günlük Not Uygulaması PRD
+
+## 1. Genel Bakış
+Bu uygulama, kullanıcıların günlük sayaç takibi yapabileceği ve anlık notlar ekleyebileceği basit, hızlı ve responsive bir web uygulamasıdır. Hedef kitle: günlük rutinlerini takip etmek isteyen, teknik bilgisi orta düzeyde olan bireylerdir. Arayüz tamamen Türkçe olacak ve mobil cihazlardan sorunsuz kullanılabilecektir.
+
+## 2. Hedefler
+1. Kullanıcıya anlık sayaç artırma, azaltma ve sıfırlama imkanı sunmak.
+2. Sayaç geçmişi ve günlük notların LocalStorage ile kalıcı olarak saklanmasını sağlamak.
+3. Mobil (320px+) ve masaüstü (1920px+) ekranlarda sorunsuz responsive deneyim sunmak.
+4. Tüm etkileşimli öğelerin (butonlar, formlar, diyaloglar) tamamen erişilebilir ve klavye ile navigasyonu destekleyen olmasını sağlamak.
+5. Uygulamanın ilk yüklenme süresini 2 saniyenin altında tutmak.
+6. DOM extractor davranış kontratına uygun, test edilebilir ve tutarlı state yönetimi sağlamak.
+
+## 3. Tech Stack Detayı
+- Framework: React 18
+- Build: Vite
+- Styling: Tailwind CSS
+- State: useState + useReducer (basit global state yönetimi)
+- Storage: localStorage (sayaç değeri, geçmiş kayıtları, notlar, ayarlar)
+- Routing: React Router DOM (SPA, 4 ekran)
+- TypeScript: Strict mode
+
+## 4. Fonksiyonal Gereksinimler
+
+### 4.1 Sayaç İşlemleri
+- Artır (+1): Ana ekrandaki "Artır" butonuna tıklayarak sayaç değeri bir artar.
+- Azalt (-1): "Azalt" butonu sayaç değerini bir azaltır; negatif değerlere düşebilir.
+- Sıfırla: "Sıfırla" butonu sıfırlama onay diyaloğunu açar; onaylandığında sayaç 0 olur ve mevcut değer geçmişe kaydedilir.
+- Geçmişi Temizle: "Geçmişi Temizle" butonu tüm sayaç geçmişi kayıtlarını siler; onay gerektirmez.
+
+### 4.2 Not Yönetimi
+- Not Ekle: Not listesi ekranındaki "Ekle" butonu veya input alanı ile yeni not eklenir.
+- Not Sil: Her notun yanındaki "Sil" butonu ile tek tek silinir.
+- Not Listesi: Tüm notlar kronolojik sırayla (en yeni üstte) gösterilir.
+
+### 4.3 Ayarlar Paneli
+- Aç/Kapat: Ana ekran veya not listesinden ayarlar simgesine tıklanarak açılır/kapatılır.
+- Tema seçimi (açık/koyu) — opsiyonel.
+- Varsayılan sayaç adım boyutu ayarı — opsiyonel.
+
+### 4.4 Sıfırlama Onay Diyaloğu
+- "Sıfırla" butonuna basıldığında modal açılır.
+- Metin: "Sayaç sıfırlanacak. Bu işlem geri alınamaz. Onaylıyor musunuz?"
+- Butonlar: "Evet, Sıfırla" (danger), "İptal" (secondary).
+
+## 5. Veri Modeli
+
+```
+CounterHistoryEntry {
+  id: string (timestamp)
+  value: number
+  action: 'increment' | 'decrement' | 'reset'
+  timestamp: number
+}
+
+Note {
+  id: string (timestamp)
+  content: string
+  createdAt: number
+}
+
+Settings {
+  theme: 'light' | 'dark'
+  stepSize: number (default 1)
+}
+
+AppState {
+  counter: number
+  history: CounterHistoryEntry[]
+  notes: Note[]
+  settings: Settings
+}
+```
+
+localStorage key: `smoke-jsonfix-135225-state`
+
+## 6. UI/UX Gereksinimleri
+
+### 6.1 Design System Seçimi
+- **Aesthetic:** minimal
+- **Renk Paleti:**
+  - Primary: #3B82F6
+  - Secondary: #64748B
+  - Background: #F8FAFC
+  - Surface: #FFFFFF
+  - Text: #0F172A
+  - Border: #E2E8F0
+  - Success: #22C55E
+  - Error: #EF4444
+  - Warning: #F59E0B
+- **Tipografi:**
+  - Heading: Inter (600, 700)
+  - Body: Inter (400, 500)
+- **Icon Library:** Lucide React
+
+### 6.2 Spacing & Components
+- Spacing scale: 4, 8, 12, 16, 24, 32, 48 px
+- Border radius: 8px (buttons, cards), 12px (modals)
+- Shadow: sm (0 1px 2px rgba(0,0,0,0.05)), md (0 4px 6px rgba(0,0,0,0.07))
+- Buton: min-height 44px, padding 12px 16px, font-weight 500
+- Kart: padding 16px, border 1px solid Border, background Surface
+
+## 7. Non-Functional Requirements
+
+### 7.1 Performans
+- İlk yükleme < 2 saniye (Vite + lazy loading yok, bundle < 200KB)
+- Sayfa geçişi < 100ms (SPA client-side routing)
+- localStorage okuma/yazma senkron, < 10ms
+
+### 7.2 Erişilebilirlik (WCAG 2.1 AA)
+- Klavye navigasyonu: Tab, Enter, Escape ile tüm etkileşimler
+- Screen reader: ARIA labels (aria-label, aria-describedby)
+- Kontrast: text >= 4.5:1, large text >= 3:1
+- Focus state: 2px ring Primary renginde
+- Touch hedefleri: min 44x44 px
+
+### 7.3 Tarayıcı Desteği
+- Chrome 90+, Firefox 88+, Safari 14+, Edge 90+
+- iOS Safari 14+, Android Chrome 90+
+- Responsive: 320px - 1920px+
+
+## 8. Proje Yapısı
+
+```
+src/
+├── components/
+│   ├── Button.tsx
+│   ├── CounterDisplay.tsx
+│   ├── HistoryList.tsx
+│   ├── NoteCard.tsx
+│   ├── NoteForm.tsx
+│   ├── SettingsPanel.tsx
+│   └── ResetDialog.tsx
+├── screens/
+│   ├── AnaSayac.tsx
+│   ├── GecmisNotListesi.tsx
+│   ├── AyarlarPaneli.tsx
+│   └── SifirlamaOnay.tsx
+├── hooks/
+│   ├── useLocalStorage.ts
+│   └── useCounter.ts
+├── utils/
+│   └── storage.ts
+├── types/
+│   └── index.ts
+├── App.tsx
+└── main.tsx
+```
+
+## 9. Window State
+
+```
+window.app = {
+  state: 'idle',
+  counter: 0,
+  historyCount: 0,
+  notesCount: 0,
+  settingsOpen: false,
+  resetDialogOpen: false
+}
+```
+
+## 10. Ekranlar
+
+| # | Ekran Adı | Tür | Açıklama |
+|---|-----------|-----|----------|
+| 1 | Ana Sayaç | dashboard | Büyük sayaç gösterimi, Artır/Azalt/Sıfırla butonları, alt gezinme |
+| 2 | Geçmiş ve Not Listesi | list | Sayaç geçmişi kayıtları ve günlük notlar, Ekle/Sil butonları |
+| 3 | Ayarlar Paneli | settings | Tema, varsayılan adım, LocalStorage temizleme seçenekleri |
+| 4 | Sıfırlama Onay Diyaloğu | modal | Sayaç sıfırlama onayı, İptal/Evet butonları |
+
+Generate a SEPARATE screen design for EVERY page, view, modal, dialog, tab panel, and settings screen described in this PRD. Do NOT skip ANY screen — even if it seems minor.
+
+MANDATORY SCREENS:
+- If the PRD mentions "settings" or "ayarlar" → generate a Settings screen
+- If the PRD mentions tabs or bottom navigation → generate EACH tab view as a separate screen
+- If the PRD mentions modals (statistics, help, share, confirmation) → generate each as a separate screen
+- If the PRD mentions error states, empty states, loading states → generate those too
+- Generate at least as many screens as there are distinct views/pages/modals in the PRD
+
+All visible text must be in Turkish. Use a dark, modern theme.
